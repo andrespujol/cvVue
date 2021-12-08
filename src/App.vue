@@ -2,8 +2,10 @@
   <v-container>
     <Header/>
     <Card/>
+    <Login/>
     <Experience/>
     <Footer/>
+    <Coments/>
   </v-container>
 </template>
 
@@ -11,7 +13,9 @@
 import Header from './components/Header.vue';
 import Card from './components/Card.vue';
 import Footer from './components/Footer.vue';
-import Experience from './components/Experience.vue';
+import Login from './components/Login.vue'
+import Experience from './components/Experience.vue'
+import Coments from './components/Coments.vue'
 
 export default {
   name: 'App',
@@ -20,7 +24,10 @@ export default {
     Header,
     Card,
     Footer,
+    Login,
     Experience,
+    Coments
+
 
   },
 

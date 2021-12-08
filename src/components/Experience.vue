@@ -19,6 +19,13 @@
         <b-card-text>
             {{experience.txt}}
         </b-card-text>
+        <b-card-text v-if="experience.title === 'Coderhouse'">
+            <label for="">¿Te gustaría leer comentarios al respecto?</label>
+            <b-button type="submit" variant="primary" class="btnLogin">Leer</b-button>
+        </b-card-text>
+        <b-card-text v-else>
+
+        </b-card-text>
     </b-card>
     </div>
 </template>
@@ -61,6 +68,10 @@
     }
 </script>
 
-<style lang="scss" scoped>
-
+<style >
+    .btnLogin {
+        width: 30%;
+        margin: 5%;
+        margin-left: 35%;
+    }
 </style>
