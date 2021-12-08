@@ -9,7 +9,8 @@
         class="cardComents"
     >
         <b-card-text v-for="comentario in comentarios" :key="comentario.id">
-            <p>{{random(comentario.comentario)}}</p>
+            <p v-if="random(1,comentarios.length) === comentario.id">{{`${comentario.comentario}`}}</p>
+            
         </b-card-text>
     </b-card>
     </div>
@@ -17,7 +18,7 @@
 </template>
 
 <script>
-    import comentarios from '../assets/data/Coments.json'
+    import comentarios from '../assets/data/coments.json'
 
     export default {
         name: 'Coments',
@@ -30,10 +31,10 @@
             }
         },
         methods: {
-            random: function getRandomInt(comentario) {
-            return Math.floor(Math.random() * comentario.length)
+            random: function getRandomId(min, max) {
+                let idRandom = Math.round(Math.random(min,max) * comentarios.length)
+                return idRandom
             },
-
         }
     }
 </script>
@@ -42,14 +43,16 @@
     .cardComents {
         width: 90%;
         margin: 0 auto;
-        height: 30vh;
+        height: 25vh;
+        text-align: center;
     }
     .card-img {
-        height: 30vh;
+        height: 25vh;
         object-fit: cover;
-
     }
+
     .cardComents p {
         font-size: 1rem;
+
     }
 </style>

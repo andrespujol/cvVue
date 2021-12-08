@@ -21,10 +21,17 @@
         </b-card-text>
         <b-card-text v-if="experience.title === 'Coderhouse'">
             <label for="">¿Te gustaría leer comentarios al respecto?</label>
-            <b-button type="submit" variant="primary" class="btnLogin">Leer</b-button>
+            <b-button type="submit" variant="primary" class="btnLogin" @click="send()">Leer</b-button>
+            <label for="">¿O preferís que hablemos al respecto?</label>
+            <b-button type="submit" variant="primary" class="btnLogin" @click="send()">Saber más</b-button>
         </b-card-text>
-        <b-card-text v-else>
-
+        <b-card-text v-else-if="experience.title === 'Fachari SAC'">
+            <label for="">¿Te gustaría que hablemos sobre esto?</label>
+            <b-button type="submit" variant="primary" class="btnLogin" @click="send()">Saber más</b-button>
+        </b-card-text>
+        <b-card-text v-else-if="experience.title === 'Clínica Cormillot (Productos Cormillot S.A.)'">
+            <label for="">¿Te gustaría que hablemos de esta experiencia?</label>
+            <b-button type="submit" variant="primary" class="btnLogin" @click="send()">Saber más</b-button>
         </b-card-text>
     </b-card>
     </div>
@@ -64,7 +71,13 @@
                     alt: "Logo Clínica Cormillot"
                 }
             ],
-        })
+        }), 
+        methods: {
+            send() {
+                this.$emit("LlevarCarrito")
+                console.log('entra')
+            }
+        }
     }
 </script>
 

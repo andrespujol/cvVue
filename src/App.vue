@@ -1,12 +1,13 @@
 <template>
-  <v-container>
+  <div>
     <Header/>
     <Card/>
     <Login/>
     <Experience/>
     <Footer/>
+    <Cart/>
     <Coments/>
-  </v-container>
+  </div>
 </template>
 
 <script>
@@ -16,6 +17,7 @@ import Footer from './components/Footer.vue';
 import Login from './components/Login.vue'
 import Experience from './components/Experience.vue'
 import Coments from './components/Coments.vue'
+import Cart from './components/Cart.vue'
 
 export default {
   name: 'App',
@@ -26,7 +28,8 @@ export default {
     Footer,
     Login,
     Experience,
-    Coments
+    Coments,
+    Cart
 
 
   },
