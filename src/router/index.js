@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 
 
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -14,22 +15,22 @@ const routes = [
     {
         path: '/experiencia',
         name: 'Experiencia',
-        component: () => import ('../views/Experiencia.vue')
+        component: () => import('../views/Experiencia.vue')
     },
     {
         path: '/educacion',
         name: 'Educacion',
-        component: () => import ('../views/Educacion.vue')
+        component: () => import('../views/Educacion.vue')
     },
     {
         path: '/skills',
         name: 'Skills',
-        component: () => import ('../views/Skills.vue')
+        component: () => import('../views/Skills.vue')
     },
     {
         path: '/about',
         name: 'About',
-        component: () => import ('../views/About.vue')
+        component: () => import('../views/About.vue')
     }
 ]
 

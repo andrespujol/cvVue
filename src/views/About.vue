@@ -1,17 +1,17 @@
 <template>
     <div>
-        <About/>
+        <h2>Sobre mí</h2>
     </div>
 </template>
 
 <script>
-    import About from '../components/About.vue'
+
 
     
     export default {
-        name: 'About',
+
         components: {
-            About
+
         }
     }
 </script>

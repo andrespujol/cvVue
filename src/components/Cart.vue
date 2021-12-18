@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import Experience from './Experience.vue'
+import Experience from './Experiencia.vue'
 
 
     export default {

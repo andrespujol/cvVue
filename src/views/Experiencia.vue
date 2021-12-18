@@ -1,17 +1,18 @@
 <template>
     <div>
-        <Experience/>
+        <h1>hola</h1>
+        <Experiencia/>
     </div>
 </template>
 
 <script>
-    import Experience from '../components/Experience.vue'
+    import Experiencia from '../components/Experiencia.vue'
 
     
     export default {
-        name: 'Experience',
+        name: 'Experiencia',
         components: {
-            Experience
+            Experiencia
         }
     }
 </script>

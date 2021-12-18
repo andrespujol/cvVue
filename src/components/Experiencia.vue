@@ -1,35 +1,35 @@
 <template>
     <div>
     <b-card
-        v-for="experience in experiences" :key="experience.id"
+        v-for="experiencia in experiencias" :key="experiencia.id"
         img-top
         tag="article"
         style="max-width: 20rem;"
         class="mb-2">   
-        <b-card-img :src="experience.url"></b-card-img>
+        <b-card-img :src="experiencia.url"></b-card-img>
         <b-card-title>
-            {{experience.title}}
+            {{experiencia.title}}
         </b-card-title>
         <b-card-text>
-            {{experience.date}}
+            {{experiencia.date}}
         </b-card-text>
         <b-card-text>
-            {{experience.msg}}
+            {{experiencia.msg}}
         </b-card-text>
         <b-card-text>
-            {{experience.txt}}
+            {{experiencia.txt}}
         </b-card-text>
-        <b-card-text v-if="experience.title === 'Coderhouse'">
+        <b-card-text v-if="experiencia.title === 'Coderhouse'">
             <label for="">¿Te gustaría leer comentarios al respecto?</label>
             <b-button type="submit" variant="primary" class="btnLogin" @click="send()">Leer</b-button>
             <label for="">¿O preferís que hablemos al respecto?</label>
             <b-button type="submit" variant="primary" class="btnLogin" @click="send()">Saber más</b-button>
         </b-card-text>
-        <b-card-text v-else-if="experience.title === 'Fachari SAC'">
+        <b-card-text v-else-if="experiencia.title === 'Fachari SAC'">
             <label for="">¿Te gustaría que hablemos sobre esto?</label>
             <b-button type="submit" variant="primary" class="btnLogin" @click="send()">Saber más</b-button>
         </b-card-text>
-        <b-card-text v-else-if="experience.title === 'Clínica Cormillot (Productos Cormillot S.A.)'">
+        <b-card-text v-else-if="experiencia.title === 'Clínica Cormillot (Productos Cormillot S.A.)'">
             <label for="">¿Te gustaría que hablemos de esta experiencia?</label>
             <b-button type="submit" variant="primary" class="btnLogin" @click="send()">Saber más</b-button>
         </b-card-text>
@@ -39,10 +39,10 @@
 
 <script>
     export default {
-        name: 'Experience',
+        name: 'Experiencia',
         data: ()=> ({
             show:false,
-            experiences: [
+            experiencias: [
                 {
                     id: 1, 
                     url: "https://i.ibb.co/M7XBX1C/recruiter.png",

@@ -8,7 +8,7 @@
         <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav>
             <router-link to='/'>Home</router-link>
-            <router-link to='/experience'>Experiencia</router-link>
+            <router-link to='/experiencia'>Experiencia</router-link>
             <router-link to='/educacion'>Educación</router-link>
             <router-link to='/skills'>Skills</router-link>
             <router-link to='/about'>Sobre mí</router-link>
@@ -31,9 +31,6 @@
         </b-navbar-nav>
         </b-collapse>
     </b-navbar>
-    <div>
-        <!-- <router-view/> -->
-    </div>
     </div>
 </template>
 

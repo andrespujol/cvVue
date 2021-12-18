@@ -1,40 +1,40 @@
 <template>
   <div>
     <Header/>
-    <Card/>
+    <router-view/>
+    <!-- <Card/>
     <Login/>
-    <Experience/>
+    <Experiencia/>
     <Footer/>
     <Cart/>
-    <Coments/>
-    <FormularioWeb/>
+    <Coments/> -->
 
-    <router-view/>
+
   </div>
 </template>
 
 <script>
 import Header from './components/Header.vue';
-import Card from './components/Card.vue';
-import Footer from './components/Footer.vue';
-import Login from './components/Login.vue'
-import Experience from './components/Experience.vue'
-import Coments from './components/Coments.vue'
-import Cart from './components/Cart.vue';
-import FormularioWeb from './components/FormularioWeb.vue'
+// import Card from './components/Card.vue';
+// import Footer from './components/Footer.vue';
+// import Login from './components/Login.vue'
+// import Experience from './components/Experiencia.vue'
+// import Coments from './components/Coments.vue'
+// import Cart from './components/Cart.vue';
+
 
 export default {
   name: 'App',
 
   components: {
     Header,
-    Card,
-    Footer,
-    Login,
-    Experience,
-    Coments,
-    Cart,
-    FormularioWeb
+    // Card,
+    // Footer,
+    // Login,
+    // Experiencia,
+    // Coments,
+    // Cart,
+
 
 
   },

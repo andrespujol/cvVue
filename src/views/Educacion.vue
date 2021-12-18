@@ -1,17 +1,17 @@
 <template>
     <div>
-        <Education/>
+        <h1>Educación</h1>
     </div>
 </template>
 
 <script>
-    import Education from '../components/Education.vue'
+
 
     
     export default {
         name: 'Education',
         components: {
-            Education
+
         }
     }
 </script>
