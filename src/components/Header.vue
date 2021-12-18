@@ -7,12 +7,16 @@
 
         <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav>
-            <b-nav-item href="#">Inicio</b-nav-item>
-            <b-nav-item href="#">Experiencia</b-nav-item>
-            <b-nav-item href="#">Educación</b-nav-item>
-            <b-nav-item href="#">Skills</b-nav-item>
+            <router-link to='/'>Home</router-link>
+            <router-link to='/experience'>Experiencia</router-link>
+            <router-link to='/educacion'>Educación</router-link>
+            <router-link to='/skills'>Skills</router-link>
+            <router-link to='/about'>Sobre mí</router-link>
+            <!-- <b-nav-item href="#">Inicio</b-nav-item> -->
+            <!-- <b-nav-item href="#">Experiencia</b-nav-item> -->
+            <!-- <b-nav-item href="#">Educación</b-nav-item>
+            <b-nav-item href="#">Skills</b-nav-item> -->
         </b-navbar-nav>
-
         <!-- Right aligned nav items -->
         <b-navbar-nav class="ml-auto">
 
@@ -27,6 +31,9 @@
         </b-navbar-nav>
         </b-collapse>
     </b-navbar>
+    <div>
+        <!-- <router-view/> -->
+    </div>
     </div>
 </template>
 

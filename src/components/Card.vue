@@ -10,6 +10,7 @@
         <b-card-title>
         {{user.title}}
         </b-card-title>
+
         <b-button href="#" variant="primary">{{ user.msg }}</b-button>
     </b-card>
     </div>

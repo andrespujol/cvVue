@@ -7,6 +7,9 @@
     <Footer/>
     <Cart/>
     <Coments/>
+    <FormularioWeb/>
+
+    <router-view/>
   </div>
 </template>
 
@@ -17,7 +20,8 @@ import Footer from './components/Footer.vue';
 import Login from './components/Login.vue'
 import Experience from './components/Experience.vue'
 import Coments from './components/Coments.vue'
-import Cart from './components/Cart.vue'
+import Cart from './components/Cart.vue';
+import FormularioWeb from './components/FormularioWeb.vue'
 
 export default {
   name: 'App',
@@ -29,7 +33,8 @@ export default {
     Login,
     Experience,
     Coments,
-    Cart
+    Cart,
+    FormularioWeb
 
 
   },
