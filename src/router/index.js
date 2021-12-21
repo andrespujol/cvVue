@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import Experiencia from '../views/Experiencia.vue'
 
 
 
@@ -15,7 +16,8 @@ const routes = [
     {
         path: '/experiencia',
         name: 'Experiencia',
-        component: () => import('../views/Experiencia.vue')
+        // component: () => import('../views/Experiencia.vue')
+        component: Experiencia
     },
     {
         path: '/educacion',
