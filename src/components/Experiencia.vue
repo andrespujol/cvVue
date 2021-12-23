@@ -1,6 +1,6 @@
 <template>
     <div>
-        <b-button @click="obtenerExperiencias()">Ver mi experiencia</b-button>
+        <b-button @click="obtenerExperiencias()" variant="primary"  class="btnExperiencias">Ver mi experiencia</b-button>
         <b-card
             v-for="experiencia in experiencias" :key="experiencia.id"
             img-top
@@ -83,7 +83,7 @@ import axios from "axios";
                 console.log('entra')
             },
             obtenerExperiencias () {
-                axios.get('https://mocki.io/v1/b90e9535-4360-483d-a101-dd5bed336c09')
+                axios.get('https://mocki.io/v1/df516e66-5d83-4a4b-9541-464f162c0865')
                     .then(data => {
                         this.experiencias = data.data
                     })
@@ -93,9 +93,9 @@ import axios from "axios";
 </script>
 
 <style >
-    .btnLogin {
-        width: 30%;
-        margin: 5%;
-        margin-left: 35%;
+    .btnExperiencias, .btnLogin {
+        width: 50%;
+        margin: 1rem 0 1rem 25%;
     }
 </style>
+

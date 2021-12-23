@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-import Experiencia from '../views/Experiencia.vue'
+
 
 
 
@@ -16,24 +16,25 @@ const routes = [
     {
         path: '/experiencia',
         name: 'Experiencia',
-        // component: () => import('../views/Experiencia.vue')
-        component: Experiencia
+        component: () => import('../components/Experiencia.vue')
+
+
     },
-    {
-        path: '/educacion',
-        name: 'Educacion',
-        component: () => import('../views/Educacion.vue')
-    },
-    {
-        path: '/skills',
-        name: 'Skills',
-        component: () => import('../views/Skills.vue')
-    },
-    {
-        path: '/about',
-        name: 'About',
-        component: () => import('../views/About.vue')
-    }
+    // {
+    //     path: '/educacion',
+    //     name: 'Educacion',
+    //     component: () => import('../components/Educacion.vue')
+    // },
+    // {
+    //     path: '/skills',
+    //     name: 'Skills',
+    //     component: () => import('../components/Skills.vue')
+    // },
+    // {
+    //     path: '/about',
+    //     name: 'About',
+    //     component: () => import('../components/About.vue')
+    // }
 ]
 
 const router = new VueRouter ({

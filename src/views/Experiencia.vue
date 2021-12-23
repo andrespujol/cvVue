@@ -1,18 +1,18 @@
 <template>
     <div>
         <h1>Experiencia</h1>
-        <!-- <Experiencia/> -->
+        <Experiencia/>
     </div>
 </template>
 
 <script>
-    // import Experiencia from '../components/Experiencia.vue'
+    import Experiencia from '../components/Experiencia.vue'
 
     
     export default {
         name: 'Experiencia',
         components: {
-            // Experiencia
+            Experiencia
         }
     }
 </script>
