@@ -8,7 +8,6 @@
 <script>
     import Experiencia from '../components/Experiencia.vue'
 
-    
     export default {
         name: 'Experiencia',
         components: {

@@ -20,6 +20,16 @@ const routes = [
 
 
     },
+    {
+        path: '/login',
+        name: 'Login',
+        component: () => import('../components/Login.vue')
+    },
+    {
+        path: '/Coments',
+        name: 'Coments',
+        component: () => import('../components/Coments.vue')
+    },
     // {
     //     path: '/educacion',
     //     name: 'Educacion',

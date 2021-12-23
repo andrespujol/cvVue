@@ -1,21 +1,17 @@
 <template>
     <div>
     <b-navbar toggleable="lg" type="dark" variant="dark ">
-        <b-navbar-brand href="#">NavBar</b-navbar-brand>
+        <b-navbar-brand href="/"><img src="../assets/logo.png" class="logo" alt="logo Andrés Pujol"></b-navbar-brand>
 
         <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
         <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav>
-            <router-link to='/'>Home</router-link>
-            <router-link to='/experiencia'>Experiencia</router-link>
-            <router-link to='/educacion'>Educación</router-link>
-            <router-link to='/skills'>Skills</router-link>
-            <router-link to='/about'>Sobre mí</router-link>
-            <!-- <b-nav-item href="#">Inicio</b-nav-item> -->
-            <!-- <b-nav-item href="#">Experiencia</b-nav-item> -->
-            <!-- <b-nav-item href="#">Educación</b-nav-item>
-            <b-nav-item href="#">Skills</b-nav-item> -->
+            <router-link to='/' class="linksMenu">Home</router-link>
+            <router-link to='/experiencia' class="linksMenu">Experiencia</router-link>
+            <router-link to='/educacion' class="linksMenu">Educación</router-link>
+            <router-link to='/skills' class="linksMenu">Skills</router-link>
+            <router-link to='/about' class="linksMenu">Sobre mí</router-link>
         </b-navbar-nav>
         <!-- Right aligned nav items -->
         <b-navbar-nav class="ml-auto">
@@ -41,6 +37,15 @@
     }
 </script>
 
-<style lang="scss" scoped>
-
+<style  scoped>
+    .navbar-brand {
+        width: 40%;
+    }
+    .logo {
+        width: 70%;
+    }
+    .linksMenu {
+        text-decoration: none;
+        color: white;
+    }
 </style>
