@@ -1,45 +1,73 @@
 <template>
     <section>
-        <h1 class="loginTitle">Iniciar sesión</h1>
-        <b-form>
-            <b-container fluid>
-                <b-row class="my-1" v-for="type in types" :key="type">
-                <b-col sm="3">
-                    <label :for="`type-${type}`"><code>{{ type }}</code>:</label>
-                </b-col>
-                <b-col sm="9">
-                    <b-form-input :id="`type-${type}`" :type="type"></b-form-input>
-                </b-col>
-                </b-row>
-                <b-button type="submit" variant="primary" class="btnLogin">Entrar</b-button>
-            </b-container>
-        </b-form>
+        <h2>Iniciar sesión</h2>
+        <div>
+            <b-form @submit="onSubmit" @reset="onReset" v-if="show" action='/'>
+            <b-form-group
+                id="input-group-1"
+                label="Mail:"
+                label-for="input-1"
+            >
+                <b-form-input
+                id="input-1"
+                v-model="form.email"
+                type="email"
+                show="false"
+                placeholder="Enter email"
+                required
+                ></b-form-input>
+            </b-form-group>
+            <b-form @submit.stop.prevent>
+                <label for="text-password">Password</label>
+                <b-form-input type="password" id="text-password" aria-describedby="password-help-block"
+                placeholder="Enter password"></b-form-input>
+                <b-form-text id="password-help-block">
+                </b-form-text>
+            </b-form>
+
+
+
+
+            <b-button type="submit" variant="primary">Submit</b-button>
+            <b-button type="reset" variant="danger">Reset</b-button>
+            </b-form>
+            <b-card class="mt-3" header="Form Data Result">
+            <pre class="m-0">{{ form }}</pre>
+            </b-card>
+        </div>
     </section>
 
 </template>
 
 <script>
-    export default {
+  export default {
     name: 'Login',
     data() {
-        return {
-            types: [
-                'usuario',
-                'nombre',
-                'email',
-                'password',
-            ]
-        }
+      return {
+        form: {
+        //   email: '',
+        },
+
+        show: true
+      }
     },
     methods: {
-        onSubmit(event) {
-            event.preventDefault()
-            alert(JSON.stringify(this.form))
-    },
-
+      onSubmit(event) {
+        event.preventDefault()
+      },
+      onReset(event) {
+        event.preventDefault()
+        // Reset our form values
+        // this.form.email = ''
+        // Trick to reset/clear native browser form validation state
+        this.show = false
+        this.$nextTick(() => {
+          this.show = true
+        })
+      },
 
     }
-}
+  }
 </script>
 
 <style scoped>
